@@ -1,0 +1,142 @@
+.flower{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background-color: rgb(82, 15, 25);
+}
+
+.flower .header{
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.flower .sign{
+  width: 600px;
+  height: 80%;
+  background-color: rgb(70, 85, 43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
+  margin-left: -50px;
+}
+
+.flower .header div{
+  font-size: 50px;
+}
+
+
+.flower .body{
+  width: 100%;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.flower .body .left{
+  width: 60%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.flower .left .up{
+
+}
+
+.flower .left .down{
+  width: 60%;
+
+  aspect-ratio: auto 1 / 1;
+  background-color: white;
+}
+.flower .flowerPhotos{
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/jims-deli.appspot.com/o/cdn%2Fslide%2Fflower.png?alt=media&token=1be87f62-2928-41a2-90e7-f450ca3615db');
+
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.flower .body .right{
+  width: 40%;
+  height: 90%;
+  padding-top: 4%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.flower .right div{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 70px;
+}
+
+.flower .right span{
+  font-size: 360px;
+  margin-top: -40px;
+  margin-bottom: -60px;
+}
+
+.flower .footer{
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+
+.flower .footer{
+  width: 100%;
+  height: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.flower .qrcode{
+  width: 60px;
+  height: 60px;
+
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/jims-deli.appspot.com/o/cdn%2Fslide%2Fqr.png?alt=media&token=1c0066b4-0fa9-4446-bc93-9f3ee2fde0d6');
+
+
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 60px;
+}
+
