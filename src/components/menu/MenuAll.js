@@ -1,167 +1,30 @@
 import { useEffect } from "react";
+import MenuData from '../../MenuData';
 
 export default function MenuAll() {
 
   var specialItemCounter = 0;
 
+  // Use MenuData.js as the single source of truth
+  let breakfast_sandwich_menu_array = MenuData.menu.breakfast_sandwich;
 
-  let breakfast_sandwich_menu_array = [
-    ["Egg",1.45],
-    ["Egg & Cheese",1.95],
-    ["Bacon, Egg & Cheese",3.50],
-    ["Ham, Egg & Cheese",3.25],
-    ["Sausage, Egg & Cheese",3.25],
-    ["Kielbasa, Egg & Cheese",4.50],
-    ["Pepper, Egg & Cheese",2.60],
-    ["Western",4.50],
-    ["Steak, Egg & Cheese",5.25],
-    ["Pastrami, Egg & Cheese",4.50],
-    ["Turkey, Egg & Cheese",4.50]
-  ];
+  let breakfast_assortment_menu_array = MenuData.menu.breakfast_assortment;
 
-  let breakfast_assortment_menu_array = [
-    ["Danish & Turnovers",1.45],
-    ["Assorted Muffins",1.95],
-    ["Assorted Bagels",0.90],
-    ["add butter",0.35],
-    ["add cream cheese",1.00],
-    ["Butter Roll",1.00],
-    ["with peanut butter",1.50],
-    ["add banana",1.00],
-    ["Croissant",0.9],
-    ["with butter",1.25],
-    ["Donuts",1.25]
-  ];
+  let cold_menu_array = MenuData.menu.cold_menu;
 
-  let cold_menu_array = [
-    ["Meatloaf",5.25,9.99],
-    ["Chicken Cutlet",5.25,9.99],
-    ["Capicola",5.25,9.99],
-    ["Buffalo Chicken",5.25,9.99],
-    ["Teriyaki Chicken",5.25,9.99],
-    ["Steak & Cheese",5.25,9.99],
-    ["Meatball & Cheese",5.25,9.99],
-    ["Pot Roast",5.99,10.99],
-    ["Pulled Pork",5.25,9.99]
-  ];
+  let hot_menu_array = MenuData.menu.hot_menu;
 
-  let hot_menu_array = [
-    ["B.L.T.",4.75,8.99],
-    ["Bologna",4.50,8.80],
-    ["Capicola",4.99,9.50],
-    ["Chicken Breast",5.25,9.99],
-    ["Cranberry, Walnut & Chic Salad",4.99,9.50],
-    ["Egg Salad",4.50,8.50],
-    ["Genoa Salami",4.75,8.99],
-    ["Ham",4.75,8.99],
-    ["Honey Ham",4.75,8.99],
-    ["Honey Turkey",4.75,8.99],
-    ["Imported Ham",4.75,8.99],
-    ["Liverwurst",4.75,8.99],
-    ["Pastrami",4.50,8.80],
-    ["Pepperoni",4.99,9.50],
-    ["Roast Beef",5.25,9.99],
-    ["Seafood Salad",4.99,9.50],
-    ["Tuna",4.50,8.50],
-    ["Turkey",4.75,8.99],
-    ["Back Pepper Turkey/Ham",4.75,8.99],
-    ["Veal Loaf",4.75,8.99],
-    ["Veggie  ",4.75,8.99]
-  ];
+  let tossed_salad_menu_array = MenuData.menu.tossed_salads;
 
-  let tossed_salad_menu_array = [
-    ["Tossed",5.25,3.99],
-    ["Chicken Tossed",6.99,8.99],
-    ["Buffalo Chicken",6.99,8.99],
-    ["Chicken Teriyaki",6.99,8.99],
-    ["Chrf (Ham, Turkey, Roast Beef & Cheese)",7.25,9.25]
-  ];
-
-  let side_salads_menu_array = [
-    ["Chicken",1.45],
-    ["German Potato",1.95],
-    ["Potato",0.90],
-    ["Pasta",0.35],
-    ["4 Bean",1.00],
-    ["Coleslaw",1.00],
-    ["Tortellini",1.50],
-    ["Cranberry Walnut Chicken",1.00],
-    ["Tuna",0.9],
-    ["Egg",1.25],
-    ["Seafood",0.90],
-    ["Macaroni",0.35],
-    ["Fruit",1.00],
-    ["Mushroom",1.00],
-    ["Rice Pudding",1.50],
-    ["Deviled Egg",1.00]
-  ];
+  let side_salads_menu_array = MenuData.menu.side_salads;
 
 
   // ["Name", "Description", Price1, Price2, "Alternate"]
 
-  let breakfast_specials_menu_array = [
-    ["Slim's Revenge","Kielbasa, egg and cheddar on wrap with hash brown and sour cream", 5.50, null, null],
-    ["Alicia's Bagel", "Ham, bacon, egg and cheese on bagel", 4.25, null, null],
-    ["Meatlover", "Ham, bacon, sausage, egg and cheese", 5.25, null, null],
-    ["Davey B", "Ham, egg and cheese with peppers and hot sauce", 3.95, null, null],
-    ["Rise and Shine", "Egg, pepper jack cheese, roasted and jalapeno peppers, with onion, salsa, hot sauce and refried beans", 4.50, null, "Add steak for  ...  $1.75"],
-    ["Steaker", "Steak, cheddar, and egg on bagel", 5.35, null, null],
-    ["Farmhouse", "Sausage, egg, cheddar, jalapeno and hash brown", 4.95, null, null],
-    ["Rigger Wrap", "Egg, double kielbasa and Swiss on wrap", 5.95, null, null],
-    ["Brian's Rigger Wrap", "Ham, egg, cheddar, swiss, provolone and hash brown", 5.50, null, null],
-    ["Pete's Pick", "Double bacon, double egg and double cheese on wrap", 5.75, null, null],
-    ["Barnyard", "Ham, bacon, sausage, egg, provolone, and hash brown on wrap", 5.25, null, null],
-    ["Eastern", "Kielbasa, egg, peppers, onion and cheese", 5.25, null, null],
-    ["JFK", "Pastrami, egg, swiss cheese and honey dijon", 4.65, null, null],
-    ["The Yogi", "Sausage, bacon, egg, cheddar cheese, hash brown, hot sauce on cheddar bagel", 5.25, null, null],
-    ["The Mountainman", "Chicken cutlet, egg, pepperjack, bacon, BBQ sauce", 5.99, null, null],
-    ["Jim McMuffin", "Ham, egg, cheddar, hash brown on an English muffin", 4.50, null, null],
-    ["The Veg", "Spinach, red onion, roasted pepper, jack cheese, hot ???? wrap", 4.50, null, null]
-  ];
+  let breakfast_specials_menu_array = MenuData.menu.breakfast_specials;
 
 
-  let lunch_specials_menu_array = [
-    ["Rocketing Roast Beef","Roast beef, horse radish cheese, lettuce, tomato, onion, banana peppers and horse radish sauce", 5.25, null, null],
-    ["Kickin Chickin","Buffalo chicken salad, cheese, bacon, lettuce, tomato, bleu cheese", 5.95, null, null],
-    ["Jake","Honey ham, honey turkey, cheese, lettuce, bacon, banana peppers and honey mustard", 5.75, null, null],
-    ["The Trucker","Chicken teriyaki, cheddar, onion, lettuce, tomato, ranch and sour cream", 5.25, null, null],
-    ["Billy Club","Chicken cutlet, pepper jack cheese, banana pepper, lettuce, tomatoes, bacon and honey mustard", 5.95, null, null],
-    ["Steve's Tasty Tuna","Tuna, cheddar, lettuce, onion, jalapeno, bacon, honey mustard", 4.99, null, null],
-    ["Bedell Wrap","Buffalo chicken, pepper jack, honey mustard, roasted jalapeno and banana peppers, lettuce", 5.25, null, null],
-    ["Spicy Italian","Combo meat, provolone, lettuce, tomato, onion, jalapenos, hot sauce and horse radish sauce", 5.50, null, null],
-    ["Dave's #9","Steak & cheese, peppers, mushrooms and onions", 5.25, null, null],
-    ["Ragin Cajun","Black pepper turkey, horseradish cheese, lettuce, tomato, onion, banana and roasted peppers, mayo and bacon, salt and pepper", 5.95, null, null],
-    ["Joe's Meat","Meatloaf, provolone, jalapenos, ketchup and horseradish", 5.25, null, null],
-    ["Cobuzzi","Chicken, teriyaki, cheese, lettuce, onion and ranch", 5.25, null, null],
-    ["Jim's Italian Combo","Capicola, ham, salami, pepperoni, provolone, lettuce, tomato, peppers, onion, olives, mayo, oil/vinegar, salt/pepper and oregano", 5.50, null, null],
-    ["All American","Ham, turkey, swiss, lettuce, tomato, onion, banana peppers, oil/vinegar and peppercorn dressing", 5.25, 9.99, null],
-    ["Belly Buster","Ham, turkey, salami, pepperoni, bacon, lettuce, tomato, pepper jack cheese, onion, peppers, oil/vinegar and peppercorn dressing", 5.99, null, null],
-    ["Cordon Bleu Club","Chicken cutlet topped with ham, provolone, bacon, lettuce and ranch dressing", 5.95, null, null],
-    ["Roast Beefer","Roast beef with melted swiss, mushrooms, lettuce, tomato and mayo", 5.25, null, null],
-    ["Spanky's Firefighter","Grilled chicken with peppers, onions, garlic and olice oil with cheese", 5.25, null, null],
-    ["Timmy T","Meatball, pepperoni, provolone with peppers and onions", 5.50, null, null],
-    ["Cuban","Pulled pork with ham, weiss, pickles, spicy mustard and mayo", 5.50, null, null],
-    ["Gonzadu","Prosciutto, capicola, provolone, lettuce, tomato, roasted red peppers, oil/vinegar and oregano", 5.50, null, null],
-    ["Greek","Salami, onions and peppers topped with feta cheese, lettuce, tomato, oil/vinegar and oregano", 4.95, null, null],
-    ["The 'Hammer'", "Steak with cheddar, bacon, onions and BBQ sauce", 5.95, null, null],
-    ["Max 'D'","Honey turkey, salami, pepperoni, lettuce, tomato, pepper jack, onion, red roasted peppers, bacon, garlic salt and pepper with chipolte sauce", 5.95, null, null],
-    ["Cameron","Deli chicken breat heated with provolone, onion, red roasted peppers, lettuce and chipolte sauce", 5.25, null, null],
-    ["Ray's Scotch Wrap","Turkey, american cheese, onion, red roasted peppers, sauerkraut and spicy mustard", 5.25, null, null],
-    ["Harvey Banger","Honey ham, honey turkey, cheddar, lettuce, tomato, red onion, cucumbers, raw peppers and honey Dijon", 5.50, null, null],
-    ["The Mistake","Pot roast, swiss, ham, mayo, spicy mustard with banana peppers", 5.99, null, null],
-    ["Ted's Blazing Buffalo","Buffalo sliced chicken breast, pepper jack cheese, banana and jalepeno peppers, lettuce, tomato, red onion and chipolte mayo", 5.25, null, null],
-    ["Mavani Veggie","Pepper jack cheese, (onion, jalapeno, roasted peppers, banana peppers, plives, cucumbers, pickles, tomato), with lettuce and ranch", 4.75, null, null],
-    ["Spencer","Oven roasted turkey with italian cheese, bacon, onion, banana peppers and ranch dressing", 5.50, null, null],
-    ["Big Mac (meatloaf)","Cheddar, lettuce, tomato, onion, pickle, thousand island dressing", 5.25, null, null],
-    ["Pat's Special","Eggplant, mozzarella, red roasted peppers, lettuce, tomato, mayo and oil/vinegar", 4.75, null, null],
-    ["Julies Italian","Ham, salami, capicola, pepperoni, italian cheese, lettuce, tomato, red onion, red peppers, olives, mayo and oil/vinegar", 5.75, null, null],
-    ["Packed Pastrami","Cheddar, red onions, durkee onions, bacon and coleslaw", 5.75, null, null],
-    ["Ultimate BLT","Honey turkey, cheddar, lettuce, tomato, mayo and bacon", 5.95, null, null],
-    ["Crabby Gabby","Steak, cheddar, banana peppers, bacon, lettuce, tomato, mayo and BBQ sauce", 5.50, null, null],
-    ["Timmy P","Chicken cutlet, sauce, italian cheese, oil, spices, pepperoni", 5.50, null, null],
-    ["The Yogi","Deli chicken breast, feta cheese, spinach, red onion, tomato, spices, oil/vinegar on a wrap", 5.50, null, null],
-    ["Suzi Q","My cat ate part of my menu so I will have to edit this later. Also verify the yogi", 9.99, null, null]
-  ];
+  let lunch_specials_menu_array = MenuData.menu.lunch_specials;
 
 
 
@@ -205,7 +68,7 @@ export default function MenuAll() {
   const addBreakfastItem = function(container, breakfastObj) {
     
     var titleStr = breakfastObj[0].toString();
-    var priceStr = "$ " + breakfastObj[1].toString();
+    var priceStr = "$ " + breakfastObj[1].toFixed(2);
     
     var box = createElement('DIV', null, 'line_box_single', null, null);
     var line = createElement('DIV', null, 'line_single', null, null);
@@ -233,8 +96,8 @@ export default function MenuAll() {
   const addLunchItem = function(container, lunchObj) {
     
     var titleStr = lunchObj[0].toString();
-    var price1Str = "$ " + lunchObj[1].toString();
-    var price2Str = "$ " + lunchObj[2].toString();
+    var price1Str = "$ " + lunchObj[1].toFixed(2);
+    var price2Str = "$ " + lunchObj[2].toFixed(2);
     
     var line_box = createElement('DIV', null, 'line_box', null, null);
     var line = createElement('DIV', null, 'line', null, null);
@@ -272,7 +135,7 @@ export default function MenuAll() {
     
     var NameStr = "#" + (specialItemCounter) + " " + Name.toString();
     var DetailStr = Detail.toString();
-    var Price1Str = "$" + Price1.toString();
+    var Price1Str = "$" + Price1.toFixed(2);
 
     var Description_div = createElement('DIV', null, 'menu_description', null, null);
     var Pricing_div = createElement('DIV', null, 'menu_pricing', null, null);
@@ -287,7 +150,7 @@ export default function MenuAll() {
     
     if (Price2 != null) {
       var temp_innerHTML = Price1_div.innerHTML;
-      var new_innerHTML = temp_innerHTML + "</br> $" + Price2.toString();
+      var new_innerHTML = temp_innerHTML + "</br> $" + Price2.toFixed(2);
 
       Price1_div.innerHTML = new_innerHTML
     };
