@@ -145,36 +145,6 @@ const MenuData = {"menu": {
     ["Black Bean Burger","Jack cheese, spinach, tomato, red onion, red roasted, chipotle", 7.20, 14.95, null, 'hot'],
     ["Scarletti","Grilled chicken, mozz, garlic, red onion, lettuce, tomato, balsamic", 8.25, 15.99, null, 'hot']
   ],
-  "tossed_salads": [
-    ["Tossed", 5.99, 8.99],
-    ["Chicken Tossed", 8.99, 11.99],
-    ["Buffalo Chicken", 8.99, 11.99],
-    ["Chicken Teriyaki", 8.99, 11.99],
-    ["Chef", 8.99, 11.99]
-  ],
-  "side_salads": [
-    ["Macaroni", 6.99],
-    ["Potato (All)", 6.99],
-    ["Tortellini", 6.99],
-    ["Pasta Salad", 5.99],
-    ["Four Bean", 5.29],
-    ["Rice Pudding", 5.99],
-    ["Mushrooms", 6.99],
-    ["Tuna", 8.49],
-    ["Coleslaw", 5.79],
-    ["Apple Crisp", 7.99],
-    ["Mozzarella", 7.99],
-    ["Cucumber Salad", 7.99],
-    ["Buffalo Chicken", 10.49],
-    ["Cranberry Walnut Chicken", 10.49],
-    ["Chicken Salad", 8.99],
-    ["Egg Salad", 5.99],
-    ["Ham Salad", 5.49],
-    ["Seafood Salad", 8.99],
-    ["Cutlet", 3.50],
-    ["Fruit Cups", 6.99],
-    ["Stuffed Prosciutto Peppers", 9.99]
-  ],
   "side_snacks": [
     ["Nuts (All)", 10.29],
     ["Swedish Fish", 6.99],
@@ -197,7 +167,7 @@ const MenuData = {"menu": {
     ["Italian Sharp", 8.99],
     ["Provolone", 6.99],
     ["Swiss", 7.69],
-    ["Pepper Jack", 6.99],
+    ["Pepper Jack", 6.99]
   ],
   "tossed_salads": [
     ["Tossed", 5.25, 3.99],
@@ -223,6 +193,28 @@ const MenuData = {"menu": {
     ["Mushroom", 1.00],
     ["Rice Pudding", 1.50],
     ["Deviled Egg", 1.00]
+  ],
+  "soup": [
+    ["Chicken Noodle", 3.99],
+    ["Tomato", 3.99],
+    ["Vegetable", 3.99],
+    ["Minestrone", 4.25],
+    ["Clam Chowder", 4.50],
+    ["Beef Barley", 4.25],
+    ["Lentil", 3.99],
+    ["Split Pea", 3.99],
+    ["Cream of Mushroom", 3.99],
+    ["Broccoli Cheddar", 4.25]
+  ],
+  "hot_dogs": [
+    ["Regular Hot Dog", 2.99],
+    ["Chili Dog", 4.25],
+    ["Cheese Dog", 3.50],
+    ["Bacon Dog", 4.50],
+    ["Chicago Dog", 4.99],
+    ["Reuben Dog", 5.25],
+    ["Buffalo Dog", 4.75],
+    ["Jumbo Dog", 3.99]
   ]
 }};
 

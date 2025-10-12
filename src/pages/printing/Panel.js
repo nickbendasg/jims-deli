@@ -43,7 +43,7 @@ export default function Panel({ categories, category, setCategory, catPick, setC
       <div className="box">
         <div className="printHead">
           {catList.map(cat => (
-            <div className={`btn${cat.name == category ? ' activeBtn' : ''}`} onClick={() => {
+            <div key={cat.name} className={`btn${cat.name == category ? ' activeBtn' : ''}`} onClick={() => {
               clearOptions();
               setCat(cat.name);
             }}>
@@ -56,7 +56,7 @@ export default function Panel({ categories, category, setCategory, catPick, setC
         <div className="printBody">
 
           {catList.map(cat => (
-            <>
+            <React.Fragment key={cat.name}>
               {cat.name == category && (
                 <>
                     <label>
@@ -107,7 +107,7 @@ export default function Panel({ categories, category, setCategory, catPick, setC
 
                 </>
               )}
-            </>
+            </React.Fragment>
           ))}
         </div>
 

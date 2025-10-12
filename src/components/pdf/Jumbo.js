@@ -318,8 +318,8 @@ const Jumbo = () => (
         <Text style={styles.otherTitle}>Tossed Salads</Text>
         <View style={styles.spacer}></View>
 
-        {menuGrab.tossed_salads.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.tossed_salads.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
@@ -329,6 +329,30 @@ const Jumbo = () => (
         <View style={styles.line}>
           <Text style={styles.lineDescription}>(Ham, Turkery, Roast Beef & Cheese)</Text>
         </View>
+
+        <View style={styles.spacer}></View>
+        <Text style={styles.otherTitle}>Soup</Text>
+        <View style={styles.spacer}></View>
+
+        {menuGrab.soup.map((thingy, index) => (
+          <View key={index} style={styles.line}>
+            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
+            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
+            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
+          </View>
+        ))}
+
+        <View style={styles.spacer}></View>
+        <Text style={styles.otherTitle}>Hot Dogs</Text>
+        <View style={styles.spacer}></View>
+
+        {menuGrab.hot_dogs.map((thingy, index) => (
+          <View key={index} style={styles.line}>
+            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
+            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
+            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
+          </View>
+        ))}
 
         <View style={styles.spacer}></View>
         <View style={styles.spacer}></View>

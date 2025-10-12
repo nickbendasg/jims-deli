@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../../components/global/Header';
 // import MyDocument from './MyDocument';
-import { PDFViewer } from '@react-pdf/renderer';
+import { PDFViewer, pdf } from '@react-pdf/renderer';
 // import React from 'react';
 import Pamphlet from '../../components/pdf/Pamphlet';
 import Jumbo from '../../components/pdf/Jumbo';
@@ -177,6 +177,62 @@ export default function Press() {
           </div>
 
           <div className="right">
+            <div style={{marginBottom: '10px', textAlign: 'center'}}>
+              <button 
+                onClick={async () => {
+                  try {
+                    // Get the current PDF component
+                    let pdfComponent = null;
+                    if (catPick === 'menu_letter') {
+                      pdfComponent = <Pamphlet />;
+                    } else if (catPick === 'schedule_everyone' || catPick === 'schedule_individual') {
+                      pdfComponent = <Schedule />;
+                    } else if (catPick === 'menu_jumbo') {
+                      pdfComponent = <Jumbo />;
+                    } else if (catPick === 'scale_sign') {
+                      pdfComponent = <ScalePrices />;
+                    } else if (catPick === 'fridge_sign') {
+                      pdfComponent = <FridgePrices />;
+                    } else if (catPick === 'order_helper') {
+                      pdfComponent = <OrderSheet />;
+                    } else if (catPick === 'alphabet_helper') {
+                      pdfComponent = <AlphabeticalSpecials />;
+                    } else if (catPick === 'news') {
+                      pdfComponent = <News />;
+                    } else {
+                      pdfComponent = <Default />;
+                    }
+
+                    // Generate PDF blob
+                    const blob = await pdf(pdfComponent).toBlob();
+                    
+                    // Create download link
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `${catPick || 'menu'}.pdf`;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                  } catch (error) {
+                    console.error('Error generating PDF:', error);
+                    alert('Error generating PDF. Please try again.');
+                  }
+                }}
+                style={{
+                  padding: '10px 20px',
+                  backgroundColor: '#007bff',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '4px',
+                  cursor: 'pointer',
+                  fontSize: '14px'
+                }}
+              >
+                Download PDF
+              </button>
+            </div>
             <PDFViewer style={{width: 'calc(100% - 100px)', height: 'calc(100% - 200px)'}}>
               {catPick === 'menu_letter' && (
                 <Pamphlet />

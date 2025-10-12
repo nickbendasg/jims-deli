@@ -18,26 +18,27 @@ import Logo from "../../assets/images/logo.png";
 // const pageSize = 'A4';
 const pageSize = 'legal';
 
-Font.register({
-  family: "Bookman",
-  format: "truetype",
-  src: Bookman 
-});
-Font.register({
-  family: "Bookman Bold Italic",
-  format: "truetype",
-  src: BookmanBoldItalic 
-});
-Font.register({
-  family: "Tempus Sans",
-  format: "truetype",
-  src: TempusSans 
-});
-Font.register({
-  family: "Tempus Sans Bold",
-  format: "truetype",
-  src: TempusSansBold
-});
+// Using system fonts to avoid loading issues
+// Font.register({
+//   family: "Bookman",
+//   format: "truetype",
+//   src: Bookman 
+// });
+// Font.register({
+//   family: "Bookman Bold Italic",
+//   format: "truetype",
+//   src: BookmanBoldItalic 
+// });
+// Font.register({
+//   family: "Tempus Sans",
+//   format: "truetype",
+//   src: TempusSans 
+// });
+// Font.register({
+//   family: "Tempus Sans Bold",
+//   format: "truetype",
+//   src: TempusSansBold
+// });
 // const fSource = 'https://use.typekit.net/cyv8ztg.css';
 
 // Font.register({ family: 'FamilyName', src: fSource, fontStyle: 'normal', fontWeight: 'normal', fonts?: [] });
@@ -49,13 +50,13 @@ const styles = StyleSheet.create({
   page1: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    fontFamily: "Bookman",
+    fontFamily: "Times-Roman",
     fontSize: '12px'
   },
   page2: {
     flexDirection: 'row',
     backgroundColor: 'white',
-    fontFamily: "Bookman",
+    fontFamily: "Times-Roman",
     fontSize: '12px',
   },
   section: {
@@ -171,7 +172,7 @@ const Pamphlet = () => (
         <View style={styles.spacer}></View>
 
         {menuGrab.breakfast_specials.map((thingy, index) => (
-          <>
+          <React.Fragment key={index}>
             <View style={styles.line}>
               <Text style={styles.lineDescription}>#{index + 1}  {thingy[0]}  </Text>
               <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
@@ -180,7 +181,7 @@ const Pamphlet = () => (
             <View style={styles.line}>
               <Text style={styles.lineDetails}>{thingy[1]}</Text>
             </View>
-          </>
+          </React.Fragment>
         ))}
 
         <View style={styles.spacer}></View>
@@ -193,8 +194,8 @@ const Pamphlet = () => (
         <Text style={styles.otherTitle}>Breakfast Sandwiches</Text>
         <Text style={styles.description}>(Served all day)</Text>
 
-        {menuGrab.breakfast_sandwich.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.breakfast_sandwich.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
@@ -208,8 +209,8 @@ const Pamphlet = () => (
         <View style={styles.spacer}></View>
 
 
-        {menuGrab.breakfast_assortment.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.breakfast_assortment.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
@@ -238,12 +239,36 @@ const Pamphlet = () => (
         <Text style={styles.otherTitle}>Tossed Salads</Text>
         <View style={styles.spacer}></View>
 
-        {menuGrab.tossed_salads.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.tossed_salads.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[2].toFixed(2)}</Text></View>
+          </View>
+        ))}
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.otherTitle}>Soup</Text>
+        <View style={styles.spacer}></View>
+
+        {menuGrab.soup.map((thingy, index) => (
+          <View key={index} style={styles.line}>
+            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
+            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
+            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
+          </View>
+        ))}
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.otherTitle}>Hot Dogs</Text>
+        <View style={styles.spacer}></View>
+
+        {menuGrab.hot_dogs.map((thingy, index) => (
+          <View key={index} style={styles.line}>
+            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
+            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
+            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
           </View>
         ))}
       </View>
@@ -290,8 +315,8 @@ const Pamphlet = () => (
           <View style={styles.linePriceBox}><Text style={styles.linePrice}>12"</Text></View>
         </View>
 
-        {menuGrab.cold_menu.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.cold_menu.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
@@ -310,8 +335,8 @@ const Pamphlet = () => (
           <View style={styles.linePriceBox}><Text style={styles.linePrice}>12"</Text></View>
         </View>
 
-        {menuGrab.hot_menu.map(thingy => (
-          <View style={styles.line}>
+        {menuGrab.hot_menu.map((thingy, index) => (
+          <View key={index} style={styles.line}>
             <Text style={styles.lineDescription}>{thingy[0]}  </Text>
             <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
             <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
@@ -331,7 +356,7 @@ const Pamphlet = () => (
         <View style={styles.spacer}></View>
 
         {menuGrab.lunch_specials.slice(0,3).map((thingy, index) => (
-          <>
+          <React.Fragment key={index}>
             <View style={styles.line}>
               <Text style={styles.lineDescription}>#{index + 1}  {thingy[0]}  </Text>
               <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
@@ -343,7 +368,7 @@ const Pamphlet = () => (
             <View style={styles.line}>
               <Text style={styles.lineDetails}>{thingy[1]}</Text>
             </View>
-          </>
+          </React.Fragment>
         ))}
 
       </View>
@@ -352,7 +377,7 @@ const Pamphlet = () => (
         <View style={styles.spacer}></View>
 
         {menuGrab.lunch_specials.slice(5,26).map((thingy, index) => (
-          <>
+          <React.Fragment key={index}>
             <View style={styles.line}>
               <Text style={styles.lineDescription}>#{index + 6}  {thingy[0]}  </Text>
               <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
@@ -364,12 +389,12 @@ const Pamphlet = () => (
             <View style={styles.line}>
               <Text style={styles.lineDetails}>{thingy[1]}</Text>
             </View>
-          </>
+          </React.Fragment>
         ))}
       </View>
       <View style={styles.section}>
         {menuGrab.lunch_specials.slice(26,55).map((thingy, index) => (
-            <>
+            <React.Fragment key={index}>
               <View style={styles.line}>
                 <Text style={styles.lineDescription}>#{index + 27}  {thingy[0]}  </Text>
                 <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
@@ -381,7 +406,7 @@ const Pamphlet = () => (
               <View style={styles.line}>
                 <Text style={styles.lineDetails}>{thingy[1]}</Text>
               </View>
-            </>
+            </React.Fragment>
           ))}
       </View>
     </Page>
