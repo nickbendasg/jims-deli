@@ -1,0 +1,53 @@
+=== File: src/pages/slide/show/Special.css ===
+=== Content ===
+.special{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 26px;
+}
+
+.special .top{
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+
+.special .split{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+.special .split .left{
+
+  width: calc(50% - 100px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 34px;
+}
+
+.special .split .right{
+  font-size: 42px;
+  width: calc(50% - 100px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+
+=== End of src/pages/slide/show/Special.css ===
+

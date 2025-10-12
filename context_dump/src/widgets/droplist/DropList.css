@@ -1,0 +1,47 @@
+=== File: src/widgets/droplist/DropList.css ===
+=== Content ===
+.droplist{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.droplist .child{
+  background-color: red;
+  cursor: pointer;
+}
+
+
+.droplist .list{
+  position: absolute;
+  bottom: 100%;
+  right: 100%;
+  width: 140px;
+  height: auto;
+  background-color: white;
+  border: 1.5px solid rgba(0,0,0,0.7);
+  border-radius: 8px;
+  padding: 3px;
+  z-index: 5;
+}
+
+.droplist .list .item{
+  width: 100%;
+  height: 24px;
+  /* border: 1px solid red; */
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 0.2s ease-in-out 0s;
+  cursor: pointer;
+  color: black;
+}
+.droplist .list .item:hover{
+  background-color: rgba(0,0,0,0.3);
+}
+
+.droplist .list .item span{
+}
+=== End of src/widgets/droplist/DropList.css ===
+

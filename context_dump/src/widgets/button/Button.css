@@ -1,0 +1,60 @@
+=== File: src/widgets/button/Button.css ===
+=== Content ===
+.btnContainer{
+  width: 40px;
+  height: 40px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.btnBox{
+  width: calc(100% - 9px);
+  height: calc(100% - 9px);
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.btnBox_active{
+  background-color: midnightblue;
+}
+
+.btnBox_active .btnSvg{
+  stroke: white;
+}
+.btnBox_active:hover .btnSvg{
+  stroke: white; 
+}
+
+.btnBox:hover{
+  cursor: pointer;
+/*   background-color: rgba(	0, 255, 127, 0.1); */
+  background-color: rgba(72,	61,	139, 0.2);
+  
+}
+
+.btnBox_active:hover{
+  background-color: midnightblue;
+  stroke: white; 
+}
+
+.btnBox:hover .btnSvg{
+  stroke-width: 1.9px;
+}
+
+.btnSvg{
+  width: 90%;
+  height: 90%;
+  stroke-width: 1px;
+  stroke: midnightblue;
+  transition: all 0.2s ease-in-out 0s;
+}
+=== End of src/widgets/button/Button.css ===
+

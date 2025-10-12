@@ -1,0 +1,8 @@
+=== File: public/robots.txt ===
+=== Content ===
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+
+=== End of public/robots.txt ===
+

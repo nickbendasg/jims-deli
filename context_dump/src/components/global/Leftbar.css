@@ -1,0 +1,100 @@
+=== File: src/components/global/Leftbar.css ===
+=== Content ===
+.leftbar {
+  background: var(--primary-color);
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftbar.min{
+
+  width: 80px;
+  min-width: 100px;
+}
+
+.leftbar.max{
+
+  width: 300px;
+  min-width: 300px;
+}
+
+
+.leftbar-content {
+  /* position: fixed; */
+  width: inherit;
+}
+.leftbar .user {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 40px 5px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.leftbar .links {
+  margin-top: 80px;
+  margin-left: 20px;
+}
+.leftbar .links ul{
+  padding-inline-start: 0px;
+}
+
+.leftbar .links li {
+  margin-top: 10px;
+  list-style-type: none;
+}
+.leftbar .links a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+  color: black;
+  box-sizing: border-box;
+}
+.leftbar .links img {
+  margin-right: 10px;
+  filter: invert(100%);
+}
+.leftbar .links a.active {
+  color: #555;
+  background: var(--bg-color);
+  border-radius: 20px 0 0 20px;
+}
+.leftbar .links .active img {
+  filter: invert(40%);
+}
+
+
+.leftbar .links a span {
+
+  margin-left: 12px;
+  font-weight: 700;
+}
+
+/* avatar in leftbar */
+.leftbar .user .avatar {
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid #fff;
+}
+
+
+.leftBtn{
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+=== End of src/components/global/Leftbar.css ===
+

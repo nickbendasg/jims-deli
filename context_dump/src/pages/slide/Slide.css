@@ -1,0 +1,90 @@
+=== File: src/pages/slide/Slide.css ===
+=== Content ===
+.slide{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: all 1s ease-in-out 0s;
+}
+
+.slide.s1{
+  margin-left: -200vw;
+}
+.slide .show{
+  min-width: 100%;
+  height: 100%;
+  background-color: rgb(12,12,12);
+  color: rgba(255,255,255,0.9);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide .title{
+
+    font-size: 74px;
+    font-weight: 500;
+}
+.slide .line{
+
+    width: 80%;
+    font-size: 52px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 12px;
+    margin-top: 42px;
+}
+.slide .line .left{
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: calc(100% - 20px);
+}
+.slide .line .right{
+
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
+
+.slide .item{
+  flex: auto 0;
+  padding-left: 3px;
+  padding-right: 10px;
+  white-space: nowrap;
+
+}
+.slide .dots{
+  flex: 2;
+}
+.slide .dots:after{
+  content: ".................................................................................................................................................................................";
+
+
+}
+
+.slide .price{
+    text-align: center;
+    width: 100%;
+    text-align: right;
+
+}
+
+.slidecount{
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 32px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.2)
+}
+=== End of src/pages/slide/Slide.css ===
+

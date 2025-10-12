@@ -1,0 +1,9 @@
+=== File: src/widgets/vector/Vector.css ===
+=== Content ===
+.testClass{
+  stroke: black;
+  fill: rgba(0,0,0,0);
+  stroke-width: 2px;
+}
+=== End of src/widgets/vector/Vector.css ===
+
