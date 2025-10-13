@@ -480,6 +480,26 @@ body {
   z-index: 3;
 }
 
+/* Mobile improvements for quick links */
+@media(max-width:480px){
+  #quick-links {
+    padding-left: 5%;
+    padding-right: 5%;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+  }
+  
+  #quick-links .links {
+    margin: 2px 8px;
+    padding: 6px 8px;
+  }
+  
+  #quick-links .links a {
+    font-size: 0.9em;
+  }
+}
+
 #quick-links .links {
   margin: 0 15px;
   padding: 8px 12px;
@@ -640,6 +660,26 @@ body {
   grid-gap: 40px;
 }
 
+/* Mobile improvements for menu container */
+@media(max-width:480px){
+  .menu_container {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .menu_item {
+    font-size: 1.3em;
+  }
+  
+  .menu_description {
+    width: 80%;
+  }
+  .menu_pricing {
+    width: 20%;
+  }
+}
+
 .menu_item {
   
   font-size: 1.5em;
@@ -691,6 +731,21 @@ body {
   
 }
 
+/* Mobile improvements for menu titles */
+@media(max-width:480px){
+  .menu_title {
+    font-size: 2.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .big_title {
+    font-size: 2.8em;
+    padding: 0 10px;
+  }
+}
+
 /* Menu Layout Ends Here */
 
 
@@ -700,17 +755,54 @@ body {
 
 /* Line Menu Layout DOUBLE Starts Here - this has two prices with each line */
 
-  @media(max-width:590px){
+  /* iPhone and small mobile devices */
+  @media(max-width:480px){
     .line_menu_container {
-      grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
+      grid-template-columns: 1fr;
+      grid-column-gap: 20px;
     }
     .line_title_container {
-      grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));;
+      grid-template-columns: 1fr;
+      grid-column-gap: 20px;
     }
     .line_menu_container_single{
-      grid-template-columns: repeat( auto-fit, minmax(350px, 1fr));
-    };
-
+      grid-template-columns: 1fr;
+      grid-column-gap: 20px;
+    }
+    
+    /* Improve text sizing for mobile */
+    .line_box {
+      font-size: 1.1em;
+    }
+    
+    /* Better spacing for mobile menu items */
+    .line {
+      margin-bottom: 8px;
+    }
+    
+    /* Adjust menu item layout for mobile */
+    .line_left_side {
+      width: 75%;
+    }
+    .line_right_side {
+      width: 25%;
+    }
+  }
+  
+  /* Medium mobile devices */
+  @media(min-width: 481px) and (max-width:590px){
+    .line_menu_container {
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+      grid-column-gap: 25px;
+    }
+    .line_title_container {
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+      grid-column-gap: 25px;
+    }
+    .line_menu_container_single{
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+      grid-column-gap: 25px;
+    }
   }
   @media(min-width: 590px) and (max-width: 1900px){
     .line_menu_container {

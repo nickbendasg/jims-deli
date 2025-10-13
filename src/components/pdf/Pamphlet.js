@@ -249,30 +249,6 @@ const Pamphlet = () => (
         ))}
       </View>
       <View style={styles.section}>
-        <Text style={styles.otherTitle}>Soup</Text>
-        <View style={styles.spacer}></View>
-
-        {menuGrab.soup.map((thingy, index) => (
-          <View key={index} style={styles.line}>
-            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
-            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
-            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
-          </View>
-        ))}
-      </View>
-      <View style={styles.section}>
-        <Text style={styles.otherTitle}>Hot Dogs</Text>
-        <View style={styles.spacer}></View>
-
-        {menuGrab.hot_dogs.map((thingy, index) => (
-          <View key={index} style={styles.line}>
-            <Text style={styles.lineDescription}>{thingy[0]}  </Text>
-            <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
-            <View style={styles.linePriceBox}><Text style={styles.linePrice}>{thingy[1].toFixed(2)}</Text></View>
-          </View>
-        ))}
-      </View>
-      <View style={styles.section}>
 
         <Image src='/logo.png'/>
         <view style={styles.fpSpacer}></view>
@@ -347,9 +323,13 @@ const Pamphlet = () => (
         <View style={styles.spacer}></View>
         <Text style={styles.description}>Choice of Toppings: Cheese, Lettuve, Tomato, Onion, Olives, Peppers, Pickles and Dressings!</Text>
         <View style={styles.spacer}></View>
-        <Text style={styles.description}>Martin Rosols Hot Dogs ......... $2.25 (Mon - Sat)</Text>
+        {menuGrab.hot_dogs.map((item, index) => (
+          <Text key={index} style={styles.description}>{item[0]} ......... ${item[1].toFixed(2)} (Mon - Sat)</Text>
+        ))}
         <View style={styles.spacer}></View>
-        <Text style={styles.description}>Soups of the Day         Small $4.99     Large $5.99</Text>
+        {menuGrab.soup.map((item, index) => (
+          <Text key={index} style={styles.description}>{item[0]}         Small ${item[1].toFixed(2)}     Large ${item[2].toFixed(2)}</Text>
+        ))}
         <View style={styles.spacer}></View>
 
         <Text style={styles.title}>Specialty Sandwiches</Text>

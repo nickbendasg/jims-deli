@@ -14,8 +14,8 @@ const MenuData = {"menu": {
   ],
   "breakfast_assortment":  [
     ["Danish & Turnovers",2.50],
-    ["Assorted Muffins",1.99],
-    ["Assorted Bagels",1.00],
+    ["Assorted Muffins",2.05],
+    ["Assorted Bagels",1.49],
     ["-        with butter",1.75],
     ["-        with cream cheese",2.99],
     ["Butter Roll",1.25],
@@ -88,7 +88,7 @@ const MenuData = {"menu": {
     ["Bedell Wrap","Buffalo chicken, pepper jack, honey mustard, roasted peppers, jalapeno peppers, and banana peppers, lettuce", 8.25, 15.99, null, 'hot'],
     ["Spicy Italian","Ham, salami, capicola, pepperoni, provolone, lettuce, tomato, onion, jalapenos, hot sauce and horse radish sauce", 8.25, 15.99, null, 'cold'],
     ["Dave's #9","Steak & cheese, peppers, mushrooms and onions", 8.25, 15.99, null, 'hot'],
-    ["Ragin Cajun","Black pepper turkey, horseradish cheese, lettuce, tomato, onion, banana and roasted peppers, mayo and bacon, salt and pepper", 9.00, 17.50, null, 'cold'],
+    ["Ragin Cajun","Black pepper turkey, horseradish cheese, lettuce, tomato, onion, banana and red and green peppers, mayo and bacon, salt and pepper", 9.00, 17.50, null, 'cold'],
     ["Joe's Meat","Meatloaf, provolone, jalapenos, ketchup and horseradish", 8.25, 15.99, null, 'hot'],
     ["Cobuzzi","Chicken, teriyaki, cheese, lettuce, onion and ranch", 8.25, 15.99, null, 'hot'],
     ["Jim's Italian Combo","Ham, salami, capicola, pepperoni, provolone, lettuce, tomato, peppers, onion, olives, mayo, oil/vinegar, salt/pepper and oregano", 8.25, 15.99, null, 'cold'],
@@ -170,11 +170,11 @@ const MenuData = {"menu": {
     ["Pepper Jack", 6.99]
   ],
   "tossed_salads": [
-    ["Tossed", 5.25, 3.99],
-    ["Chicken Tossed", 6.99, 8.99],
-    ["Buffalo Chicken", 6.99, 8.99],
-    ["Chicken Teriyaki", 6.99, 8.99],
-    ["Chef", 6.99, 8.99]
+    ["Tossed", 5.99, 8.99],
+    ["Chicken Tossed", 8.99, 11.99],
+    ["Buffalo Chicken", 8.99, 11.99],
+    ["Chicken Teriyaki", 8.99, 11.99],
+    ["Chef", 8.99, 11.99]
   ],
   "side_salads": [
     ["Chicken", 1.45],
@@ -195,26 +195,10 @@ const MenuData = {"menu": {
     ["Deviled Egg", 1.00]
   ],
   "soup": [
-    ["Chicken Noodle", 3.99],
-    ["Tomato", 3.99],
-    ["Vegetable", 3.99],
-    ["Minestrone", 4.25],
-    ["Clam Chowder", 4.50],
-    ["Beef Barley", 4.25],
-    ["Lentil", 3.99],
-    ["Split Pea", 3.99],
-    ["Cream of Mushroom", 3.99],
-    ["Broccoli Cheddar", 4.25]
+    ["Soups of the Day", 5.15, 6.19]
   ],
   "hot_dogs": [
-    ["Regular Hot Dog", 2.99],
-    ["Chili Dog", 4.25],
-    ["Cheese Dog", 3.50],
-    ["Bacon Dog", 4.50],
-    ["Chicago Dog", 4.99],
-    ["Reuben Dog", 5.25],
-    ["Buffalo Dog", 4.75],
-    ["Jumbo Dog", 3.99]
+    ["Martin Rosols Hot Dogs", 3.75]
   ]
 }};
 
