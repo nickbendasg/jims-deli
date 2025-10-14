@@ -177,9 +177,8 @@ const MenuData = {"menu": {
     ["Chef", 8.99, 11.99]
   ],
   "side_salads": [
-    ["Chicken", 1.45],
-    ["German Potato", 1.95],
-    ["Potato", 0.90],
+    ["Chicken", 11.69],
+    ["Potato", 7.99],
     ["Pasta", 0.35],
     ["4 Bean", 1.00],
     ["Coleslaw", 1.00],
