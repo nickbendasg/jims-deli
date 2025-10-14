@@ -744,6 +744,48 @@ body {
     font-size: 2.8em;
     padding: 0 10px;
   }
+  
+  /* Fix dollar sign display issues on iPhone */
+  .menu_price, .line_price1, .line_price2, .price, .priceTwo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    min-width: fit-content;
+    padding-left: 2px;
+    padding-right: 2px;
+    display: inline-block;
+    line-height: 1.2;
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+  
+  /* Ensure dollar signs don't get cut off */
+  .line_right_side {
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+  }
+  
+  /* Better spacing for price elements */
+  .line_price1, .line_price2 {
+    margin: 1px 0;
+    line-height: 1.2;
+    flex-shrink: 0;
+  }
+  
+  /* Prevent line wrapping in price containers */
+  .line {
+    flex-wrap: nowrap;
+  }
+  
+  .line_left_side {
+    flex-shrink: 1;
+    min-width: 0;
+  }
 }
 
 /* Menu Layout Ends Here */

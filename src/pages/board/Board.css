@@ -268,6 +268,24 @@
   text-align: right;
 }
 
+/* Mobile fixes for dollar signs on iPhone */
+@media(max-width:480px){
+  .board_box .item .top .price,
+  .board_box .item .top .priceTwo {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    min-width: fit-content;
+    padding: 2px;
+    display: inline-block;
+    line-height: 1.2;
+    word-spacing: 0;
+    letter-spacing: 0;
+  }
+}
+
 .board_box .item .bottom{
   width: 100%;
   height: auto;
