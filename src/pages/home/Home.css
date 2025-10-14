@@ -670,13 +670,19 @@ body {
   
   .menu_item {
     font-size: 1.3em;
+    flex-wrap: nowrap;
+    align-items: center;
   }
   
   .menu_description {
     width: 80%;
+    flex-shrink: 1;
+    min-width: 0;
   }
   .menu_pricing {
     width: 20%;
+    flex-shrink: 0;
+    min-width: fit-content;
   }
 }
 
