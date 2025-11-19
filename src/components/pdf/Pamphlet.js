@@ -219,11 +219,11 @@ const Pamphlet = () => (
         <View style={[styles.line, {marginRight: '6px', marginTop: '2px'}]}>
           <Text style={styles.lineDescription}>Coffee</Text>
           <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
-          <View style={styles.linePriceBox}><Text style={styles.linePrice}>Md 1.86</Text></View>
+          <View style={styles.linePriceBox}><Text style={styles.linePrice}>Sm 2.10</Text></View>
           <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
-          <View style={styles.linePriceBox}><Text style={styles.linePrice}>Lg 2.14</Text></View>
+          <View style={styles.linePriceBox}><Text style={styles.linePrice}>Med 2.33</Text></View>
           <View style={styles.lineDotsBox}><Text style={styles.lineDots}></Text></View>
-          <View style={styles.linePriceBox}><Text style={styles.linePrice}>XLg 2.61</Text></View>
+          <View style={styles.linePriceBox}><Text style={styles.linePrice}>Lg 2.84</Text></View>
         </View>
 
         <View style={styles.spacer}></View>

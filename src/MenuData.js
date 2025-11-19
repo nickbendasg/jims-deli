@@ -13,28 +13,28 @@ const MenuData = {"menu": {
     ["Turkey, Egg & Cheese",7.75]
   ],
   "breakfast_assortment":  [
-    ["Danish & Turnovers",2.50],
-    ["Assorted Muffins",2.05],
-    ["Assorted Bagels",1.49],
-    ["-        with butter",1.75],
-    ["-        with cream cheese",2.99],
-    ["Butter Roll",1.25],
-    ["-        with peanut butter",1.50],
-    ["-        add banana",1.00],
-    ["Croissant",1.00],
-    ["-        with butter",1.25],
-    ["Donuts",1.45]
+    ["Danish & Turnovers",3.50],
+    ["Assorted Muffins",2.50],
+    ["Assorted Bagels",1.50],
+    ["-        with butter",1.85],
+    ["-        with cream cheese",3.35],
+    ["Butter Roll",1.50],
+    ["-        with peanut butter",1.85],
+    ["-        add banana",2.50],
+    ["Croissant",1.25],
+    ["-        with butter",1.95],
+    ["Donuts",1.95]
   ],
   "hot_menu": [
-    ["Meatloaf",8.25,15.99],
-    ["Chicken Cutlet",8.25,15.99],
-    ["Grilled Chicken",8.25,15.99],
-    ["Buffalo Chicken",8.25,15.99],
-    ["Teriyaki Chicken",8.25,15.99],
-    ["Steak & Cheese",8.25,15.99],
-    ["Meatball & Cheese",8.25,15.99],
-    ["Pot Roast",8.25,15.99],
-    ["Pulled Pork",8.25,15.99]
+    ["Meatloaf",8.99,16.99],
+    ["Chicken Cutlet",8.99,16.99],
+    ["Grilled Chicken",8.99,16.99],
+    ["Buffalo Chicken",8.99,16.99],
+    ["Teriyaki Chicken",8.99,16.99],
+    ["Steak & Cheese",8.99,16.99],
+    ["Meatball & Cheese",8.99,16.99],
+    ["Pot Roast",8.99,16.99],
+    ["Pulled Pork",8.99,16.99]
   ],
   "cold_menu": [
     ["B.L.T.",6.99,13.50,null],
@@ -76,7 +76,7 @@ const MenuData = {"menu": {
     ["The Yogi", "Sausage, bacon, egg, cheddar cheese, hash brown, hot sauce on cheddar bagel", 8.99, null, null],
     ["The Mountainman", "Chicken cutlet, egg, pepperjack, bacon, BBQ sauce", 10.35, null, null],
     ["Jim McMuffin", "Ham, egg, cheddar, hash brown on an English muffin", 7.75, null, null],
-    ["The Veg", "Spinach, red onion, roasted pepper, jack cheese, hot sauce on a wrap", 6.75, null, null]
+    ["The Veg", "Spinach, red onion, roasted pepper, jack cheese, hot sauce, hash brown on a wrap", 6.75, null, null]
   ],
   "lunch_specials": [
     ["Rocking Roast Beef","Roast beef, cheese, lettuce, tomato, onion, banana peppers and horse radish sauce", 8.25, 15.99, null, 'cold'],
@@ -88,7 +88,7 @@ const MenuData = {"menu": {
     ["Bedell Wrap","Buffalo chicken, pepper jack, honey mustard, roasted peppers, jalapeno peppers, and banana peppers, lettuce", 8.25, 15.99, null, 'hot'],
     ["Spicy Italian","Ham, salami, capicola, pepperoni, provolone, lettuce, tomato, onion, jalapenos, hot sauce and horse radish sauce", 8.25, 15.99, null, 'cold'],
     ["Dave's #9","Steak & cheese, peppers, mushrooms and onions", 8.25, 15.99, null, 'hot'],
-    ["Ragin Cajun","Black pepper turkey, horseradish cheese, lettuce, tomato, onion, banana and red and green peppers, mayo and bacon, salt and pepper", 9.00, 17.50, null, 'cold'],
+    ["Ragin Cajun","Black pepper, turkey cheese, lettuce, tomato, onion, banana and red and green peppers, mayo and bacon, salt and pepper", 9.00, 17.50, null, 'cold'],
     ["Joe's Meat","Meatloaf, provolone, jalapenos, ketchup and horseradish", 8.25, 15.99, null, 'hot'],
     ["Cobuzzi","Chicken, teriyaki, cheese, lettuce, onion and ranch", 8.25, 15.99, null, 'hot'],
     ["Jim's Italian Combo","Ham, salami, capicola, pepperoni, provolone, lettuce, tomato, peppers, onion, olives, mayo, oil/vinegar, salt/pepper and oregano", 8.25, 15.99, null, 'cold'],
@@ -108,7 +108,7 @@ const MenuData = {"menu": {
     ["Harvey Banger","Honey ham, honey turkey, cheddar, lettuce, tomato, red onion, cucumbers, raw peppers and honey Dijon", 7.75, 14.99, null, 'cold'],
     ["The Mistake","Pot roast, swiss, ham, mayo, spicy mustard with banana peppers", 9.25, 18.00, null, 'hot'],
     ["Ted's Blazing","Buffalo sliced chicken breast, pepper jack cheese, banana and jalepeno peppers, lettuce, tomato, red onion and chipolte mayo", 7.75, 14.99, null, 'both'],
-    ["Mavani Veggie","Pepper jack cheese, (onion, jalapeno, roasted peppers, banana peppers, plives, cucumbers, pickles, tomato), with lettuce and ranch", 6.99, 13.50, null, 'cold'],
+    ["Mavani Veggie","Pepper jack cheese, (onion, jalapeno, roasted peppers, banana peppers, olives, cucumbers, pickles, tomato), with lettuce and ranch", 6.99, 13.50, null, 'cold'],
     ["Spencer","Oven roasted turkey with italian cheese, bacon, onion, banana peppers and ranch dressing", 9.55, 18.55, null, 'cold'],
     ["Big Mac (meatloaf)","Cheddar, lettuce, tomato, onion, pickle, thousand island dressing", 8.25, 15.99, null, 'hot'],
     ["Pat's Special","Eggplant, mozzarella, red roasted peppers, lettuce, tomato, mayo and oil/vinegar", 6.99, 13.50, null, 'hot'],
@@ -133,7 +133,7 @@ const MenuData = {"menu": {
     ["Wawa","Oven roasted turkey, durkee onion, bacon, cheese, mayo", 9.50, 18.99, null, 'cold'],
     ["Chicken Ceasar Wrap","Crispy or grilled chicken, lettuce, spinach, croutons, tomato, olives, ceasar dressing", 8.99, null, null, 'cold'],
     ["Chicken Parmesan","Crispy chicken cutlet, mozzarella, sauce, oil, spices", 8.25, 15.99, null, 'hot'],
-    ["Monte Cristo Wrap","Honey ham and turkey, swiss, thousand island on french toast", 7.75, null, null, 'hot'],
+    ["Monte Cristo","Honey ham and turkey, swiss, thousand island on french toast", 7.75, null, null, 'hot'],
     ["Lucette","Steak, horseradish cheese, onion, jalapenos, banana peppers, mayo, hot sauce", 8.25, 15.99, null, 'hot'],
     ["Harley","Tuna, italian cheese, tomato, cucumbers, mushroom", 7.49, 14.40, null, 'cold'],
     ["Gopher","Pulled pork, roast beef, lettuce, tomato, swiss, onion, banana peppers, mayo, horseradish mayo", 8.75, 17.00, null, 'hot'],
@@ -171,10 +171,10 @@ const MenuData = {"menu": {
   ],
   "tossed_salads": [
     ["Tossed", 5.99, 8.99],
-    ["Chicken Tossed", 8.99, 11.99],
-    ["Buffalo Chicken", 8.99, 11.99],
-    ["Chicken Teriyaki", 8.99, 11.99],
-    ["Chef", 8.99, 11.99]
+    ["Chicken Tossed", 9.75, 12.75],
+    ["Buffalo Chicken", 9.75, 12.75],
+    ["Chicken Teriyaki", 9.75, 12.75],
+    ["Chef", 9.75, 12.75]
   ],
   "side_salads": [
     ["Chicken", 11.69],
