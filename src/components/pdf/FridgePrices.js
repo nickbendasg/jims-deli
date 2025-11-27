@@ -316,7 +316,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' / lb.' : snack[1]}
                         </Text>
                       </div>
                     </div>
@@ -336,7 +336,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' / lb.' : snack[1]}
                         </Text>
                       </div>
                     </div>
@@ -361,7 +361,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' lb' : snack[1]}
                         </Text>
                       </div>
                     </div>
@@ -381,7 +381,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' lb' : snack[1]}
                         </Text>
                       </div>
                     </div>
@@ -406,7 +406,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' / lb.' : snack[1]}
                         </Text>
                       </div>
                     </div>
@@ -426,7 +426,7 @@ const FridgePrices = () => (
                       </div>
                       <div style={styles.price}>
                         <Text>
-                          ${snack[1].toFixed(2)} / lb.
+                          ${typeof snack[1] === 'number' ? snack[1].toFixed(2) + ' / lb.' : snack[1]}
                         </Text>
                       </div>
                     </div>

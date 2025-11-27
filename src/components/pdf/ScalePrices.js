@@ -203,7 +203,7 @@ const ScalePrices = () => (
                     </div>
                     <div style={styles.price}>
                       <Text>
-                        {snack[1].toFixed(2)} / lb.
+                        ${snack[1].toFixed(2)} lb
                       </Text>
                     </div>
                   </div>
@@ -223,7 +223,7 @@ const ScalePrices = () => (
                     </div>
                     <div style={styles.price}>
                       <Text>
-                        {snack[1].toFixed(2)} / lb.
+                        ${snack[1].toFixed(2)} lb
                       </Text>
                     </div>
                   </div>

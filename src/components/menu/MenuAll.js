@@ -68,7 +68,20 @@ export default function MenuAll() {
   const addBreakfastItem = function(container, breakfastObj) {
     
     var titleStr = breakfastObj[0].toString();
-    var priceStr = "$ " + breakfastObj[1].toFixed(2);
+    var priceValue = breakfastObj[1];
+    var priceStr;
+    
+    // Handle both number and string prices
+    if (typeof priceValue === 'number') {
+      priceStr = "$ " + priceValue.toFixed(2);
+    } else {
+      priceStr = "$ " + priceValue.toString();
+    }
+    
+    // Add "lb" for side salads
+    if (container.id === 'line_side_salads_container') {
+      priceStr += " lb";
+    }
     
     var box = createElement('DIV', null, 'line_box_single', null, null);
     var line = createElement('DIV', null, 'line_single', null, null);
