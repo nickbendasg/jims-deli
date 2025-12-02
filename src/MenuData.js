@@ -94,7 +94,7 @@ const MenuData = {"menu": {
     ["Jim's Italian Combo","Ham, salami, capicola, pepperoni, provolone, lettuce, tomato, peppers, onion, olives, mayo, oil/vinegar, salt/pepper and oregano", 8.99, 17.49, null, 'cold'],
     ["All American","Ham, turkey, swiss, lettuce, tomato, onion, banana peppers, oil/vinegar and peppercorn dressing", 8.50, 16.50, null, 'cold'],
     ["Belly Buster","Ham, turkey, salami, pepperoni, bacon, lettuce, tomato, pepper jack cheese, onion, peppers, oil/vinegar and peppercorn dressing", 9.50, 18.50, null, 'cold'],
-    ["Cordon Bleu Club","Chicken cutlet topped with ham, provolone, bacon, lettuce and ranch dressing", 10.25, 19.50, "No Bacon ... 8.50    17.50", 'hot'],
+    ["Cordon Bleu Club","Chicken cutlet topped with ham, provolone, bacon, lettuce and ranch dressing", 10.25, 19.50, "No Bacon ... 8.50    16.50", 'hot'],
     ["Roast Beefer","Roast beef with melted swiss, mushrooms, lettuce, tomato and mayo", 8.75, 17.50, null, 'hot'],
     ["Spanky's Firefighter","Grilled chicken with peppers, onions, garlic and olice oil with cheese", 8.99, 17.49, null, 'hot'],
     ["Timmy T","Meatball, pepperoni, provolone with peppers and onions", 9.50, 18.50, null, 'hot'],
